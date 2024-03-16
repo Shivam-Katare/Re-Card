@@ -1,0 +1,150 @@
+/* src/styles/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+
+.barriecito {
+  font-family: 'Barriecito', sans-serif;
+}
+
+body {
+ background-color: #111927;
+  background-image:
+    radial-gradient(at 47% 33%, hsl(297.07, 68%, 23%) 0, transparent 59%),
+    radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+
+  min-height: 100vh;
+}
+
+.card {
+  background: linear-gradient(135.48deg, rgb(233, 30, 99) 0%, rgb(94, 12, 40) 20%, rgb(233, 30, 99) 47.5%, rgb(173, 20, 87) 67%, rgb(94, 12, 40) 83%, rgb(233, 30, 99) 100%), linear-gradient(rgb(255, 152, 0) 0%, rgb(255, 193, 7) 85.42%);
+}
+
+.card-border {
+  border-right: 3px solid;
+  border-left: 3px solid;
+}
+
+.card-container {
+  transform-style: preserve-3d;
+    transition: all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
+    will-change: transform;
+    transform: perspective(1000px) rotateX(0.161551deg) rotateY(1.28134deg) scale3d(1, 1, 1);
+}
+
+.right-side {
+  background-image: url("./assets/mesh.png");
+}
+
+.peer {
+  background-color: black;
+}
+
+.generate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+  color: white;
+  text-shadow: 2px 2px rgb(116, 116, 116);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: solid 2px black;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: hsl(49deg 98% 60%);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.generate-button:active {
+  transform: scale(0.9);
+  transition: all 100ms ease;
+}
+
+.generate-button svg {
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.play {
+  transition: all 0.5s ease;
+}
+
+.generate-button:hover svg {
+  transform: scale(3) translate(50%);
+}
+
+.now {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.generate-button:hover .now {
+  transform: translateX(55px);
+}
+
+.generate-button:hover .play {
+  transform: translateX(200%);
+}
+
+.total-posts {
+  font-family: fantasy;
+  color: white;
+  letter-spacing: 1px;
+  display: grid;
+  justify-items: end;
+}
+
+.total-posts-container {
+  position: absolute;
+  background: black;
+  width: 160px;
+  padding: 2px 12px;
+  border-radius: 8px;
+  top: 174px;
+  right: 111px;
+  box-shadow: rgb(255 255 255 / 25%) 0px -20px 55px, rgb(255 255 255 / 12%) 0px -20px 30px, rgb(37 36 36 / 12%) -1px -9px 6px, rgb(0 0 0 / 17%) 1px 4px 13px, rgb(255 255 255 / 9%) 0px -3px 5px;
+}
+
+.logo {
+  width: 185px;
+  padding: 5px;
+  border-radius: 13px;
+  position: absolute;
+  top: 295px;
+  left: 12px;
+}
+
+.quote-on-card {
+  font-size: 19px;
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  left: 115px;
+  top: 14px;
+}
+
+/* media queries */
+
+@media (max-width: 786px) {
+  .card-container {
+    transform: perspective(1000px) scale(0.6);
+    bottom: 130px;
+  }
+}
+
+@media (max-width: 456px) {
+  .card-container {
+    transform: perspective(1000px) scale(0.5);
+    bottom: 160px;
+  }
+}

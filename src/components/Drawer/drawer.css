@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Madimi+One&family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+/* font family */
+
+.madimi-one-regular {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.metal-mania-regular {
+  font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff00eb;
+  letter-spacing: 4px;
+  font-size: 31px;
+}
+
+.angkor-regular {
+  font-family: "Angkor", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff7f00;
+    letter-spacing: 1px;
+}
+
+.bad-script-regular {
+  font-family: "Bad Script", cursive;
+  font-style: normal;
+}
+
+
+/* rest of css */
+
+ol.style_1 {
+  counter-reset: li;
+  padding-left: 2.5rem;
+  padding: 0.25rem 0 0.25rem 2.75rem;
+}
+
+ol.style_1 small {
+  opacity: 0.3;
+}
+
+ol.style_1 ol,
+ol.style_1 ul {
+  padding: 0.75rem 0 0 1.5rem;
+}
+
+ol.style_1 li {
+  margin-bottom: 0.375rem;
+}
+
+ol.style_1>li {
+  position: relative;
+  counter-increment: li;
+  min-height: 2rem;
+  padding-top: 0.5rem;
+  list-style: none;
+}
+
+ol.style_1>li::before,
+ol.style_1>li::after {
+  position: absolute;
+  display: flex;
+  opacity: 1;
+}
+
+ol.style_1>li::before {
+  content: counter(li);
+  left: -2.75rem;
+  top: 0;
+  height: calc(2rem - 1px);
+  width: calc(2rem - 1px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid black;
+  font-weight: 900;
+}
+
+ol.style_1>li::after {
+  content: "";
+  left: -1.75rem;
+  top: calc(2rem + 1px);
+  height: calc(100% - 2.5rem);
+  border-left: 1px solid black;
+  font-weight: 900;
+}
