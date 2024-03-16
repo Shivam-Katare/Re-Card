@@ -12,60 +12,87 @@ import { FaFileImage } from "react-icons/fa6";
 
 const MainPage = ({ userData }) => {
 
-const selectedQuote = useStore(state => state.selectedQuote);
-const seletedTheme = useStore(state => state.selectedTheme);
-const setToggleBorder = useStore((state) => state.setToggleBorder);
-const toggleBorder = useStore((state) => state.toggleBorder);
-const [imageFitContain, setImageFitContain] = useState(true);
+  const selectedQuote = useStore(state => state.selectedQuote);
+  const seletedTheme = useStore(state => state.selectedTheme);
+  const setToggleBorder = useStore((state) => state.setToggleBorder);
+  const toggleBorder = useStore((state) => state.toggleBorder);
+  const [imageFitContain, setImageFitContain] = useState(true);
 
-const cardRef = useRef();
+  const cardRef = useRef();
 
-useEffect(() => {
-  VanillaTilt.init(cardRef.current, {
-    max: 10,
-    speed: 1000,
-    glare: true,
-    "max-glare": 0.8,
-  });
+  useEffect(() => {
+    VanillaTilt.init(cardRef.current, {
+      max: 10,
+      speed: 1000,
+      glare: true,
+      "max-glare": 0.8,
+    });
 
-  return () => cardRef.current.vanillaTilt.destroy();
-}, []);
+    const handleResize = () => {
+      cardRef.current.vanillaTilt.destroy();
+      if (window.innerWidth < 480) {
+        VanillaTilt.init(cardRef.current, {
+          max: 10,
+          speed: 1000,
+          glare: false,
+          "max-glare": 0,
+        });
+      } else {
+        VanillaTilt.init(cardRef.current, {
+          max: 10,
+          speed: 1000,
+          glare: true,
+          "max-glare": 0.8,
+        });
+      }
+    };
 
-function formatCount(count) {
-  if (count >= 1e9) return (count / 1e9).toFixed(1) + 'B';
-  if (count >= 1e6) return (count / 1e6).toFixed(1) + 'M';
-  if (count >= 1e3) return (count / 1e3).toFixed(1) + 'K';
-  return count;
-}
+    handleResize();
+    console.log(window.innerWidth);
 
-const handleImageFit = () => {
-  setImageFitContain(prevFit => !prevFit);
-};
+    window.addEventListener('resize', handleResize);
 
-const handleDownload = () => {
-  const node = cardRef.current;
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      cardRef.current.vanillaTilt.destroy();
+    };
+  }, []);
 
-  toast.promise(
-    toPng(node)
-      .then(function (dataUrl) {
-        const link = document.createElement('a');
-        link.download = 'card.png';
-        link.href = dataUrl;
-        link.click();
-      }),
-    {
-      loading: 'Downloading...',
-      success: 'Card downloaded successfully',
-      error: 'Error converting card to image',
-    }
-  );
-};
+  function formatCount(count) {
+    if (count >= 1e9) return (count / 1e9).toFixed(1) + 'B';
+    if (count >= 1e6) return (count / 1e6).toFixed(1) + 'M';
+    if (count >= 1e3) return (count / 1e3).toFixed(1) + 'K';
+    return count;
+  }
+
+  const handleImageFit = () => {
+    setImageFitContain(prevFit => !prevFit);
+  };
+
+  const handleDownload = () => {
+    const node = cardRef.current;
+
+    toast.promise(
+      toPng(node)
+        .then(function (dataUrl) {
+          const link = document.createElement('a');
+          link.download = 'card.png';
+          link.href = dataUrl;
+          link.click();
+        }),
+      {
+        loading: 'Downloading...',
+        success: 'Card downloaded successfully',
+        error: 'Error converting card to image',
+      }
+    );
+  };
 
   return (
     <>
       <div ref={cardRef} className={`${seletedTheme} w-[44.5rem] h-[21rem] rounded-[12px] bg-black p-[9px]`} data-tilt
         data-tilt-glare
-        data-tilt-max-glare="0.8">
+      >
         <div className={`p-6 ${toggleBorder ? `border-r-[3px] border-l-[3px] rounded-[12px] ${seletedTheme === "white-gold" || seletedTheme === "yellow-orange" || seletedTheme === "white-pink" || seletedTheme === "white-blue" || seletedTheme === "white-gray" ? "border-black" : "border-white"} ` : ""}`}>
           <div className='w-full grid grid-cols-2 justify-items-center'>
             <div className='flex flex-col gap-0.5 min-w-80 max-w-80 min-h-[16rem] max-h-[16rem]'>
