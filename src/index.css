@@ -120,8 +120,8 @@ body {
   padding: 5px;
   border-radius: 13px;
   position: absolute;
-  top: 295px;
-  left: 12px;
+  top: 300px;
+  left: 19px;
 }
 
 .quote-on-card {
@@ -131,6 +131,7 @@ body {
   position: absolute;
   left: 115px;
   top: 14px;
+  margin-right: 8px;
 }
 
 /* media queries */

@@ -90,7 +90,8 @@ const MainPage = ({ userData }) => {
 
   return (
     <>
-      <div ref={cardRef} className={`${seletedTheme} w-[44.5rem] h-[21rem] rounded-[12px] bg-black p-[9px]`} data-tilt
+    <div ref={cardRef} className='bg-[#ffc0cb00] p-[7px] rounded-[14px]'>
+      <div className={`${seletedTheme} w-[44.5rem] h-[21rem] rounded-[12px] bg-black p-[9px]`} data-tilt
         data-tilt-glare
       >
         <div className={`p-6 ${toggleBorder ? `border-r-[3px] border-l-[3px] rounded-[12px] ${seletedTheme === "white-gold" || seletedTheme === "yellow-orange" || seletedTheme === "white-pink" || seletedTheme === "white-blue" || seletedTheme === "white-gray" ? "border-black" : "border-white"} ` : ""}`}>
@@ -151,6 +152,8 @@ const MainPage = ({ userData }) => {
           </div>
         </div>
       </div>
+    </div>
+      
       <div className='grid grid-cols-[0.2fr_0.2fr_0.2fr_0.2fr_0.7fr] gap-6 mt-7 items-center'>
         <div className="tooltip tooltip-bottom cursor-pointer" data-tip="Download Card" onClick={handleDownload}>
           <FaDownload className='text-[white] text-4xl ' />

@@ -5,6 +5,7 @@ import {
 } from "@material-tailwind/react";
 import "./drawer.css";
 import ReCard from "../../assets/logo.png";
+import { FaAnglesRight } from "react-icons/fa6";
 
 export function Sidebar() {
   const [open, setOpen] = React.useState(false);
@@ -15,7 +16,7 @@ export function Sidebar() {
   return (
     <React.Fragment>
       <div className="tooltip tooltip-bottom cursor-pointer" data-tip="Click to open sidebar">
-        <h1 onClick={openDrawer} className="bad-script-regular text-white font-extrabold cursor-pointer text-[42px] mt-[24px]">Re-Card</h1>
+        <FaAnglesRight onClick={openDrawer} className="text-white text-4xl" />
       </div>
       <Drawer open={open} onClose={closeDrawer} className="p-3 overflow-y-scroll bg-[ghostwhite]" size={400}>
         <div className=" mb-16 flex items-center justify-between">

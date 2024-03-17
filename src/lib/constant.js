@@ -8,13 +8,12 @@ export const quotesOptions = [
   "Documenting my tech journey",
   "Expanding the horizons",
   "Unleashing the tech creativity",
-  "The world needs your tech stories",
+  "The world needs our tech stories",
   "Blogging: how techies communicate",
   "Tech blogging: a journey of discovery",
   "Code is poetry, blog is prose",
   "Making sense of complexity",
-  "Blogging: giving voice to my code",
-  "Tech blogging: sharing your vision",
+  "Giving voice to my code",
   "Blogging: the ultimate tech challenge",
   "Tech blogs: sparking innovation",
   "Tech is nothing without stories",
@@ -26,10 +25,10 @@ export const quotesOptions = [
   "Code for yourself, blog for others",
   "Blogging is the new coding",
   "Tech bloggers are the future leaders",
-  "Write code, write blogs, write history",
+  "Write blogs, Write history",
   "Sharing knowledge is power",
   "Blogging: the art of explaining tech",
-  "Learn, code, blog, repeat",
+  "Learn, Code, Blog, Repeat",
   "Devin designs... I define 💪"
 ];
 

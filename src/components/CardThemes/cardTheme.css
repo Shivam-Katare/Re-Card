@@ -42,27 +42,22 @@
 
 .blue-green {
   background: linear-gradient(135.48deg, rgb(33, 150, 243) 0%, rgb(13, 71, 161) 20%, rgb(33, 150, 243) 47.5%, rgb(25, 118, 210) 67%, rgb(13, 71, 161) 83%, rgb(33, 150, 243) 100%), linear-gradient(rgb(76, 175, 80) 0%, rgb(139, 195, 74) 85.42%);
-  box-shadow: rgb(70 63 137) 0px 22px 70px 4px;
 }
 
 .white-gray {
   background: linear-gradient(135.48deg, rgb(255, 255, 255) 0%, rgb(189, 189, 189) 20%, rgb(255, 255, 255) 47.5%, rgb(224, 224, 224) 67%, rgb(189, 189, 189) 83%, rgb(255, 255, 255) 100%), linear-gradient(rgb(248, 248, 248) 0%, rgb(245, 245, 245) 85.42%);
-  box-shadow: rgb(146 134 138) -1px 3px 20px 4px;
 }
 
 .white-blue {
   background: linear-gradient(135.48deg, rgb(255, 255, 255) 0%, rgb(144, 202, 249) 20%, rgb(255, 255, 255) 47.5%, rgb(187, 222, 251) 67%, rgb(144, 202, 249) 83%, rgb(255, 255, 255) 100%), linear-gradient(rgb(227, 242, 253) 0%, rgb(187, 222, 251) 85.42%);
-  box-shadow: rgb(70 113 133) -1px 3px 20px 4px;
 }
 
 .white-pink {
   background: linear-gradient(135.48deg, rgb(255, 255, 255) 0%, rgb(248, 187, 208) 20%, rgb(255, 255, 255) 47.5%, rgb(244, 143, 177) 67%, rgb(248, 187, 208) 83%, rgb(255, 255, 255) 100%), linear-gradient(rgb(252, 228, 236) 0%, rgb(248, 187, 208) 85.42%);
-  box-shadow: rgb(248 190 210) -1px 3px 20px 4px;
 }
 
 .white-gold {
   background: linear-gradient(135.48deg, rgb(255, 255, 255) 0%, rgb(255, 215, 0) 20%, rgb(255, 255, 255) 47.5%, rgb(255, 223, 0) 67%, rgb(255, 215, 0) 83%, rgb(255, 255, 255) 100%), linear-gradient(rgb(255, 248, 220) 0%, rgb(255, 239, 213) 85.42%);
-  box-shadow: rgb(133, 133, 70) 0-1px 3px 20px 4px;
 }
 
 .blue-pink {
