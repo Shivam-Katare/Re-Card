@@ -38,7 +38,7 @@ if (!userData) {
       </div> 
       <TextInput username={username} onChange={handleUserNameChange} handleGenerateCard={handleGenerateCard} />
       <div className="relative mt-4 w-fit h-screen p-[29px] self-stretch overflow-hidden rounded-32 grid place-items-center grid-rows-[0.6fr_0.1fr] card-container">
-        {userData.username ? <CardsContainer userData={userData} /> : <p className='text-white font-extrabold text-[16px] text-center'>For optimal performance, please adjust your screen size to less than 1200px.<br /> You can do this by pressing `Ctrl` and `-` (minus) to scale down your display for enhanced results. 🖥️✨</p>}
+        {userData.username ? <CardsContainer userData={userData} /> : <p className='text-white font-extrabold text-[16px] text-center'>For optimal performance, please adjust your screen size to less than 1400px.<br /> You can do this by pressing `Ctrl` and `-` (minus) to scale down your display for enhanced results. 🖥️✨</p>}
       </div>
       <Toaster />
     </div>
