@@ -6,6 +6,7 @@ import {
 import "./drawer.css";
 import ReCard from "../../assets/logo.png";
 import { FaAnglesRight } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 
 export function Sidebar() {
   const [open, setOpen] = React.useState(false);
@@ -45,6 +46,15 @@ export function Sidebar() {
           With Re-Card, you can generate a sleek,
           customizable card that showcases your Hashnode profile in style.
         </p>
+        <div className="w-full grid grid-cols-[0.4fr_0.2fr] justify-items-start items-baseline">
+          <h3 className="text-[20px] font-extrabold text-black mt-[12px]">Github Repo:</h3>
+          <span className="inline">
+            <a href="https://github.com/Shivam-Katare/Re-Card" target="_blank" className="text-blue-700 font-extrabold underline">
+              <FaGithub />
+            </a>
+          </span>
+        </div>
+
 
         <ol className="style_1">
           <li>
@@ -59,7 +69,7 @@ export function Sidebar() {
           <li>
             <h1 className="text-[20px] angkor-regular">Join the Open Source Community:</h1>
             <p className="text-black text-left mt-[12px]">
-              As an open-source project, <a href="https://github.com/Shivam-Katare/Re-Card" target="_blank" className="text-blue-700 font-extrabold">Re-Card</a> thrives on collaboration.
+              As an open-source project, <a href="https://github.com/Shivam-Katare/Re-Card" target="_blank" className="text-blue-700 font-extrabold underline">Re-Card</a> thrives on collaboration.
               If you're a developer with ideas to enhance the app, your contributions are welcome!
               Fork the repository, push your features, and help us grow. Together, we can build something amazing.
             </p>
