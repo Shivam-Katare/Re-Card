@@ -5,7 +5,6 @@ import {
 } from "@material-tailwind/react";
 import "./drawer.css";
 import ReCard from "../../assets/logo.png";
-import { FaAnglesRight } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 
 export function Sidebar() {
@@ -16,8 +15,20 @@ export function Sidebar() {
 
   return (
     <React.Fragment>
-      <div className="tooltip tooltip-bottom cursor-pointer" data-tip="Click to open sidebar">
-        <FaAnglesRight onClick={openDrawer} className="text-white text-4xl" />
+      <div>
+        <div className="navbar bg-[#31114d]">
+          <div className="flex-none" onClick={openDrawer}>
+            <button className="btn btn-square btn-ghost text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+          </div>
+          <div className="flex-1">
+            <a className="text-xl bad-script-regular text-white font-extrabold cursor-pointer invisible sm:visible">Re-Card</a>
+          </div>
+          <div className="flex-none">
+            <h1 className="text-white">Re-Card is Inspired by <a href='https://app.daily.dev/devcard' target='_blank' className="font-bold text-white underline">Daily.Dev's DevCard</a></h1>
+          </div>
+        </div>
       </div>
       <Drawer open={open} onClose={closeDrawer} className="p-3 overflow-y-scroll bg-[ghostwhite]" size={400}>
         <div className=" mb-16 flex items-center justify-between">
@@ -45,6 +56,13 @@ export function Sidebar() {
           Re-Card is your personal branding powerhouse.
           With Re-Card, you can generate a sleek,
           customizable card that showcases your Hashnode profile in style.
+        </p>
+
+        <p className="text-black text-left mt-6">
+         Re-Card takes inspiration from 
+         <a href='https://app.daily.dev/devcard' target='_blank' className="font-bold text-black underline"> Daily.Dev's DevCard </a>
+         approach to digital identity for developers. With a nod to their creativity, <b> Re-Card</b> extends this concept to the vibrant
+         <b> Hashnode community</b>, offering a personalized and shareable card for bloggers and tech enthusiasts alike.
         </p>
         <div className="w-full grid grid-cols-[0.4fr_0.2fr] justify-items-start items-baseline">
           <h3 className="text-[20px] font-extrabold text-black mt-[12px]">Github Repo:</h3>

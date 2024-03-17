@@ -32,9 +32,8 @@ if (!userData) {
 
   return (
     <div className="App w-full grid justify-items-center">
-      <div className='w-full grid justify-items-center items-center grid-cols-[0.09fr_0.8fr]'>
+      <div className='w-full grid'>
       <Sidebar />
-        <h1 className="bad-script-regular text-white font-extrabold cursor-pointer text-[42px] mt-[24px]">Re-Card</h1>
       </div> 
       <TextInput username={username} onChange={handleUserNameChange} handleGenerateCard={handleGenerateCard} />
       <div className="relative mt-4 w-fit h-screen p-[29px] self-stretch overflow-hidden rounded-32 grid place-items-center grid-rows-[0.6fr_0.1fr] card-container">
