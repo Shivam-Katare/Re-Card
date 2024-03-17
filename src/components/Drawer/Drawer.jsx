@@ -26,7 +26,11 @@ export function Sidebar() {
             <a className="text-xl bad-script-regular text-white font-extrabold cursor-pointer invisible sm:visible">Re-Card</a>
           </div>
           <div className="flex-none">
-            <h1 className="text-white">Re-Card is Inspired by <a href='https://app.daily.dev/devcard' target='_blank' className="font-bold text-white underline">Daily.Dev's DevCard</a></h1>
+            <h1 className="text-white">
+              <span className="invisible absolute sm:visible sm:relative">Re-Card is </span> 
+               Inspired by
+              <a href='https://app.daily.dev/devcard' target='_blank' className="font-bold text-white underline"> Daily.Dev's DevCard</a>
+            </h1>
           </div>
         </div>
       </div>
