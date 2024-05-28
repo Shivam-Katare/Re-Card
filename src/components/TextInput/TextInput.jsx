@@ -17,7 +17,7 @@ function TextInput({ username, onChange, handleGenerateCard }) {
           <div className="flex items-center"></div>
           <div className="text-sm leading-6">
             <p className="font-semibold text-[#ffffff] hover:text-[#ffffff] cursor-text">
-            Note: Username is case sensitive.
+            Note: Username is case sensitive. Test with this username: <span className="text-[#ff6b6b]">ShivamKatare</span>
             </p>
           </div>
         </div>
