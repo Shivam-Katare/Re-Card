@@ -8,7 +8,7 @@ function TextInput({ username, onChange, handleGenerateCard }) {
 
         <input
           type="text"
-          placeholder="Enter your Hashnode username (e.g. 'JohnDoe'). Note: Username is case sensitive."
+          placeholder="Enter your Hashnode username (e.g. 'ShivamKatare'). Note: Username is case sensitive. "
           className="input input-bordered bg-[#181717b3] text-white"
           value={username}
           onChange={onChange}
